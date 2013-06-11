@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Amount apuesta:</b>
+  <%= @apuestum.amount_apuesta %>
+</p>
+
+<p>
+  <b>Amount pagado:</b>
+  <%= @apuestum.amount_pagado %>
+</p>
+
+
+<%= link_to 'Edit', edit_apuestum_path(@apuestum) %> |
+<%= link_to 'Back', apuesta_path %>

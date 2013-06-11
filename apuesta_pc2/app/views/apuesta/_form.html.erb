@@ -1,0 +1,25 @@
+<%= form_for(@apuestum) do |f| %>
+  <% if @apuestum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apuestum.errors.count, "error") %> prohibited this apuestum from being saved:</h2>
+
+      <ul>
+      <% @apuestum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :amount_apuesta %><br />
+    <%= f.number_field :amount_apuesta %>
+  </div>
+  <div class="field">
+    <%= f.label :amount_pagado %><br />
+    <%= f.number_field :amount_pagado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

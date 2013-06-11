@@ -1,0 +1,25 @@
+<h1>Listing caballos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Ratio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @caballos.each do |caballo| %>
+  <tr>
+    <td><%= caballo.name %></td>
+    <td><%= caballo.ratio %></td>
+    <td><%= link_to 'Show', caballo %></td>
+    <td><%= link_to 'Edit', edit_caballo_path(caballo) %></td>
+    <td><%= link_to 'Destroy', caballo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Caballo', new_caballo_path %>

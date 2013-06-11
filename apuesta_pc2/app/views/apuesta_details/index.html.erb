@@ -1,0 +1,21 @@
+<h1>Listing apuesta_details</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apuesta_details.each do |apuesta_detail| %>
+  <tr>
+    <td><%= link_to 'Show', apuesta_detail %></td>
+    <td><%= link_to 'Edit', edit_apuesta_detail_path(apuesta_detail) %></td>
+    <td><%= link_to 'Destroy', apuesta_detail, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Apuesta detail', new_apuesta_detail_path %>

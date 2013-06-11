@@ -1,0 +1,25 @@
+<h1>Listing apuesta</h1>
+
+<table>
+  <tr>
+    <th>Amount apuesta</th>
+    <th>Amount pagado</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apuesta.each do |apuestum| %>
+  <tr>
+    <td><%= apuestum.amount_apuesta %></td>
+    <td><%= apuestum.amount_pagado %></td>
+    <td><%= link_to 'Show', apuestum %></td>
+    <td><%= link_to 'Edit', edit_apuestum_path(apuestum) %></td>
+    <td><%= link_to 'Destroy', apuestum, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Apuestum', new_apuestum_path %>
