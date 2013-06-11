@@ -8,13 +8,14 @@ Twitter.configure do |config|
 end
 
   def read_message 
-  	return "sin user" if self.user.blank?
-  	Twitter.user_timeline(self.user).first.text
+    return "sin user" if self.user.blank?
+    Twitter.user_timeline(self.user).first.text
   end
 
   def update_status
-  	return "sin update" if self.message.blank?
-  	Twitter.update(self.message)
+    return "sin update" if self.message.blank?
+    Twitter.update(self.message)
   end
 
 end
+

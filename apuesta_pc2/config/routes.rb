@@ -3,8 +3,6 @@ ApuestaPc2::Application.routes.draw do
   match "user" => "tweets#read_message"
   match "update" => "tweets#update_status"
 
-  resources :tweets
-
   resources :caballo_x_carreras
 
   resources :apuesta_details
