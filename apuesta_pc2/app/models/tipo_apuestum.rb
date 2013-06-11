@@ -1,3 +1,3 @@
 class TipoApuestum < ActiveRecord::Base
-	has_many :apuestums
+	has_many :apuestum
 end
