@@ -1,4 +1,6 @@
 ApuestaPc2::Application.routes.draw do
+  resources :caballo_x_carreras
+
   resources :apuesta_details
 
   resources :apuesta
